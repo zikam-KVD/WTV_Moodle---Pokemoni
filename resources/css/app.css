@@ -1,4 +1,5 @@
 @import 'style.css';
+@import 'cards.css';
 
 @tailwind base;
 @tailwind components;
