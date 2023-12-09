@@ -13,6 +13,19 @@
     filter: blur(0);
 }
 
+.pokemon .icon {
+    color: white;
+    transition: color 1s;
+}
+
+.pokemon:hover .icon {
+    color: gray;
+}
+
+.icon:hover {
+    color: black !important;
+}
+
 .pokemon-image{
     display: flex;
     justify-content: center;
@@ -22,9 +35,13 @@
 .pokemon-image img {
     max-width: 250px;
     max-height: 200px;
+}
+
+.pokemon .pokemon-image img {
     filter: grayscale(.8);
     transition: filter 1s;
 }
+
 .pokemon:hover .pokemon-image img{
     filter: grayscale(0);
 }
@@ -40,4 +57,16 @@
 
 .types .type:first-child {
     margin-left: 0;
+}
+
+.top-5 {
+    top: 1.25rem;
+}
+
+.left-5 {
+    left: 1.25rem;
+}
+
+.right-5 {
+    right: 1.25rem;
 }

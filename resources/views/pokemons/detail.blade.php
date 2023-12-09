@@ -15,10 +15,9 @@
         </div>
         @endif
 
-        <div class="max-w-6xl sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
+        <div class="max-w-6xl sm:px-6 lg:px-8">
 
-            @foreach($pokemons as $pokemon)
-            <div class="pokemon max-w-sm border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class=" relative max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 @php
                     $pokemonPath = "pokemons/" . strtolower($pokemon->name) . ".jpg";
                 @endphp
@@ -27,26 +26,27 @@
                 </div>
                 <div class="p-6">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {{ $pokemon->name }}
+                            {{ $pokemon->name }}
                     </h5>
                     <div class="types">
                         <div class="type rounded" style="background-color: {{ $pokemon->type->hex_barva }}">
                             {{ $pokemon->type->nazev }}
                         </div>
                     </div>
+                    <div class="mt-2">
+                        <p>{{ $pokemon->description }}</p>
+                    </div>
                 </div>
-                <div class="absolute top-5 right-5">
+                <div class="absolute top-5 left-5">
                     <a
-                        href="{{ route('detail', ['id' => $pokemon->id]) }}"
-                        class="icon"
-                        title="Zobrazení detailu"
-                        aria-title="Zobrazení detailu"
+                        href="{{ route('index') }}"
+                        title="Zpět"
+                        aria-title="Zpět"
                     >
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-chevron-left">U</i>
                     </a>
                 </div>
             </div>
-            @endforeach
 
         </div>
     </div>
