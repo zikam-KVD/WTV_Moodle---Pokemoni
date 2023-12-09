@@ -16,12 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PokemonController::class, 'showAllPokemons'])->name('index');
 Route::get('/detail/{id}', [PokemonController::class, 'showDetail'])->name('detail');
+Route::get('/type/{id}', [PokemonController::class, 'showType'])->name('type');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    //moznost upravy pokemona
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

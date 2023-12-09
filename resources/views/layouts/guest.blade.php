@@ -5,8 +5,7 @@
 
     <body>
 
-            {{ $slot }}
-
+        {{ $slot }}
 
         @include('includes.footer')
 

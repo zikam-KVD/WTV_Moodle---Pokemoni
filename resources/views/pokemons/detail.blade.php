@@ -32,9 +32,11 @@
                         <span> #{{ sprintf('%04d', $pokemon->id) }}</span>
                     </h6>
                     <div class="types">
-                        <div class="type rounded" style="background-color: {{ $pokemon->type->hex_barva }}">
-                            {{ $pokemon->type->nazev }}
-                        </div>
+                        <a href="{{ route('type', ['id' => $pokemon->type->id]) }}">
+                            <div class="type rounded" style="background-color: {{ $pokemon->type->hex_barva }}">
+                                {{ $pokemon->type->nazev }}
+                            </div>
+                        </a>
                     </div>
                     <div class="mt-2">
                         <p>{{ $pokemon->description }}</p>
@@ -43,8 +45,8 @@
                 <div class="absolute top-5 left-5">
                     <a
                         href="{{ route('index') }}"
-                        title="Zpět"
-                        aria-title="Zpět"
+                        title="Zpět na pokédex"
+                        aria-title="Zpět na pokédex"
                     >
                         <i class="fa-solid fa-chevron-left">U</i>
                     </a>
