@@ -28,6 +28,9 @@
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $pokemon->name }}
                     </h5>
+                    <h6 class="text-gray-400">
+                        <span> #{{ sprintf('%04d', $pokemon->id) }}</span>
+                    </h6>
                     <div class="types">
                         <div class="type rounded" style="background-color: {{ $pokemon->type->hex_barva }}">
                             {{ $pokemon->type->nazev }}

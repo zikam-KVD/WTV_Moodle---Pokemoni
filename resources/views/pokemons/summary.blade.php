@@ -25,16 +25,6 @@
                 <div class="pokemon-image p-6">
                     <img class="rounded-t-lg" src="{{ asset($pokemonPath) }}" alt="pokemon_{{ $pokemon->id }}" />
                 </div>
-                <div class="p-6">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {{ $pokemon->name }}
-                    </h5>
-                    <div class="types">
-                        <div class="type rounded" style="background-color: {{ $pokemon->type->hex_barva }}">
-                            {{ $pokemon->type->nazev }}
-                        </div>
-                    </div>
-                </div>
                 <div class="absolute top-5 right-5">
                     <a
                         href="{{ route('detail', ['id' => $pokemon->id]) }}"
