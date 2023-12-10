@@ -48,7 +48,7 @@
                         title="Zpět na pokédex"
                         aria-title="Zpět na pokédex"
                     >
-                        <i class="fa-solid fa-chevron-left">U</i>
+                        <i class="fa-solid fa-chevron-left"></i>
                     </a>
                 </div>
             </div>

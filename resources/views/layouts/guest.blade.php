@@ -4,8 +4,11 @@
     @include('includes.head')
 
     <body>
-
-        {{ $slot }}
+        <div class="min-h-screen bg-gray-100">
+            <main>
+                {{ $slot }}
+            </main>
+        </div>
 
         @include('includes.footer')
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PokemonController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,9 @@ Route::middleware([
     'verified'
 ])->group(function () {
     //moznost upravy pokemona
+
+    //moznost upravy typu
+    Route::get('/admin/type', [AdminController::class, 'returnTypePage']);
 
     Route::get('/dashboard', function () {
         return view('dashboard');

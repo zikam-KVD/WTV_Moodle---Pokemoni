@@ -1600,6 +1600,15 @@ select{
 .z-50{
   z-index: 50;
 }
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
 .col-span-6{
   grid-column: span 6 / span 6;
 }
@@ -1835,6 +1844,11 @@ select{
 .cursor-pointer{
   cursor: pointer;
 }
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .list-inside{
   list-style-position: inside;
 }
@@ -1843,6 +1857,9 @@ select{
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1958,6 +1975,9 @@ select{
 }
 .border-t{
   border-top-width: 1px;
+}
+.border-t-2{
+  border-top-width: 2px;
 }
 .border-gray-100{
   --tw-border-opacity: 1;
@@ -2575,6 +2595,10 @@ select{
   }
 }
 @media (min-width: 640px){
+
+  .sm\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
 
   .sm\:col-span-4{
     grid-column: span 4 / span 4;
