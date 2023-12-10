@@ -24,12 +24,16 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    //moznost upravy pokemona
 
-    //moznost upravy typu
-    Route::get('/admin/type', [AdminController::class, 'returnTypePage']);
 
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::prefix('admin')->group(function () {
+        //moznost upravy pokemona
+        Route::get('/pokemons', [AdminController::class, 'returnPokemonsPage'])->name('admin-pokemons');
+        //moznost upravy typu
+        Route::get('/type', [AdminController::class, 'returnTypePage'])->name('admin-type');
+    });
 });

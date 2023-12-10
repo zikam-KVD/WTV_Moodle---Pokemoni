@@ -41,9 +41,6 @@ class PokemonTypesSummary extends Component
         } catch (\Throwable $th) {
             $this->message = "Chyba při zápisu do databáze. " . $th->getMessage();
         }
-
-
-
     }
 
     public function render()

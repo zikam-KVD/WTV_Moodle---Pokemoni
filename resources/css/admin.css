@@ -1,0 +1,8 @@
+.pokemon-thumb {
+    text-align: center;
+}
+
+.pokemon-thumb img {
+    max-width: 75px;
+    max-height: 75px;
+}
