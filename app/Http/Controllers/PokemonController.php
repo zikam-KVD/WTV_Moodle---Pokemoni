@@ -32,11 +32,12 @@ class PokemonController extends Controller
         $type = Type::find($typeId);
         $pokemons = null;
 
-        if(null !== $type)
+        if(null == $type)
         {
-            $pokemons = Pokemon::where('type_id', $typeId)->get();
+            abort(404);
         }
 
+        $pokemons = Pokemon::where('type_id', $typeId)->get();
 
         return View('pokemons.type', ['pokemons' => $pokemons, 'type' => $type]);
     }
